@@ -36,31 +36,41 @@
             <section>
                 <h2 class="text-xl font-bold text-white mb-3">1. Overview</h2>
                 <p>
-                    The <strong>Wolvesville Tactical Overlay & Analytics Tracker</strong> ("we," "our," or "the Extension") is committed to maintaining strict user privacy. This Extension operates entirely as a client-side utility helper to assist players with manual notes, chat summaries, and vote history tracking during active matches on Wolvesville.com.
+                    The <strong>Wolvesville Tactical Overlay & Analytics Tracker</strong> ("we," "our," or "the Extension") is committed to maintaining strict user privacy. This Extension operates as a client-side utility helper to assist players with manual notes, chat summaries, and vote history tracking during active matches on Wolvesville.com.
                 </p>
             </section>
 
             <!-- Section 2 -->
             <section>
-                <h2 class="text-xl font-bold text-white mb-3">2. Zero Data Collection & Transmission</h2>
+                <h2 class="text-xl font-bold text-white mb-3">2. Core Match Data Collection & Transmission</h2>
                 <p class="mb-3">
-                    We believe your data belongs to you. The Extension adheres to a strict zero-collection protocol:
+                    We believe your gameplay data belongs to you. The core features of the Extension adhere to a strict local-only protocol:
                 </p>
                 <ul class="list-disc list-inside space-y-2 pl-2 text-slate-400">
-                    <li><strong class="text-slate-200">No Server Communications:</strong> The Extension does not possess any remote server infrastructure or analytics backend endpoints. It cannot transmit information over the network.</li>
-                    <li><strong class="text-slate-200">No Personal Data Scraping:</strong> We do not read, store, or log user accounts, login credentials, emails, authentication tokens, or payment details.</li>
-                    <li><strong class="text-slate-200">No Match Logs History Harvesting:</strong> Your chat analytics charts and voting matrices are compiled entirely inside temporary volatile runtime variables. They disappear when you close or refresh the match tab.</li>
+                    <li><strong class="text-slate-200">No Server Communications for Match Data:</strong> The Extension does not possess any remote server infrastructure for gameplay analytics. It does not transmit your match logs or chat data over the network.</li>
+                    <li><strong class="text-slate-200">No Personal Game Data Scraping:</strong> We do not read, store, or log user accounts, login credentials, or game authentication tokens.</li>
+                    <li><strong class="text-slate-200">Volatile Match Logging:</strong> Your chat analytics charts and voting matrices are compiled entirely inside temporary runtime variables. They disappear when you close or refresh the match tab.</li>
                 </ul>
             </section>
 
             <!-- Section 3 -->
             <section>
-                <h2 class="text-xl font-bold text-white mb-3">3. Chrome Extension Permissions Declared</h2>
+                <h2 class="text-xl font-bold text-white mb-3">3. License Verification & Third-Party Integrations</h2>
+                <p class="mb-3">To support the ongoing development of the Extension, we may offer optional premium features and display integrations:</p>
+                <ul class="list-disc list-inside space-y-2 pl-2 text-slate-400">
+                    <li><strong class="text-slate-200">Separation of License and Gameplay Data:</strong> If you choose to upgrade to a premium tier, transaction data is processed entirely by our secure third-party Merchant of Record (e.g., LemonSqueezy, Stripe). The Extension only locally stores a cryptographic license validation token to verify your premium status. It does not read, process, or store your payment details.</li>
+                    <li><strong class="text-slate-200">Ad & Affiliate Networks:</strong> The free tier of the Extension may include non-intrusive affiliate links or display banners provided by third-party gaming networks. These networks may use standard browser cookies to serve contextually relevant content, but they do not have access to your in-game chat or vote analytics.</li>
+                </ul>
+            </section>
+
+            <!-- Section 4 -->
+            <section>
+                <h2 class="text-xl font-bold text-white mb-3">4. Chrome Extension Permissions Declared</h2>
                 <p class="mb-3">To execute its overlay functionalities seamlessly under Manifest V3 parameters, the Extension requests the following browser execution pathways:</p>
                 <div class="bg-slate-800/50 border border-slate-700/60 rounded-xl p-4 space-y-3">
                     <div>
                         <code class="text-indigo-400 font-mono text-xs bg-slate-900 px-2 py-1 rounded">chrome.storage.local</code>
-                        <p class="text-sm text-slate-400 mt-1">Utilized strictly to save your preferred localized language settings (<code class="font-mono text-xs">wovLang</code>) and UI theme layout configuration options (<code class="font-mono text-xs">wovDarkMode</code>) persistently across sessions.</p>
+                        <p class="text-sm text-slate-400 mt-1">Utilized strictly to save your preferred localized language settings, UI theme configurations, and premium license validation tokens persistently across sessions.</p>
                     </div>
                     <div>
                         <code class="text-indigo-400 font-mono text-xs bg-slate-900 px-2 py-1 rounded">activeTab / Host Permissions</code>
@@ -69,19 +79,11 @@
                 </div>
             </section>
 
-            <!-- Section 4 -->
-            <section>
-                <h2 class="text-xl font-bold text-white mb-3">4. Security Infrastructure</h2>
-                <p>
-                    Because all operational tracking mechanics compile within your browser's local sandbox memory infrastructure, the security of your tactical metrics is tethered entirely to your personal device architecture. No outside malicious third parties can access your logged analytics because the data never crosses a network bridge.
-                </p>
-            </section>
-
             <!-- Section 5 -->
             <section>
                 <h2 class="text-xl font-bold text-white mb-3">5. Developer Policy Compliance Guarantee</h2>
                 <p>
-                    The Extension strictly complies with the Google Chrome Web Store Single Purpose Policy, User Data Privacy Guidelines, and Developer Program Rules. It does not automate inputs, read underlying WebSocket binaries, or simulate user interactions, ensuring absolute integrity alongside official fair-play regulations.
+                    The Extension strictly complies with the Google Chrome Web Store Single Purpose Policy, User Data Privacy Guidelines, and Developer Program Rules. <strong>The Extension operates purely via passive HTML DOM element parsing. It does not intercept, read, modify, or transmit WebSocket network payloads</strong>, ensuring absolute integrity alongside official game fair-play regulations.
                 </p>
             </section>
 
@@ -89,7 +91,7 @@
             <section>
                 <h2 class="text-xl font-bold text-white mb-3">6. Contact & Support</h2>
                 <p>
-                    For code architectural clarifications, feature requests, or direct security infrastructure inquiries, please open an issue tracking card via our official community development pipeline or open documentation avenues listed on our main landing interface.
+                    For code architectural clarifications, feature requests, or direct security infrastructure inquiries, please contact the developer directly at: <strong>[lenhatkhai2686@gmail.com]</strong> or open an issue on our official GitHub repository at <strong>[https://github.com/KhaiDeveloper06/WWLandingPage]</strong>.
                 </p>
             </section>
 
