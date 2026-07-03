@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Wolvesville Tactical Overlay & Analytics Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#0f172a] text-slate-300 min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
+
+    <!-- Simple Header -->
+    <header class="border-b border-slate-800/80 bg-[#0f172a]/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center space-x-3 group">
+                <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-600/30">W</div>
+                <span class="font-bold text-lg tracking-tight text-white group-hover:text-slate-300 transition-colors">WovTactical</span>
+            </a>
+            <a href="/" class="text-sm font-semibold text-indigo-400 hover:text-indigo-300 transition-colors">← Back to Home</a>
+        </div>
+    </header>
+
+    <!-- Main Content Policy Container -->
+    <main class="max-w-4xl mx-auto px-4 py-12 flex-grow w-full">
+        <h1 class="text-3xl font-extrabold text-white mb-2">Privacy Policy</h1>
+        <p class="text-sm text-slate-500 mb-8">Last Updated: July 2026</p>
+
+        <div class="space-y-8 text-slate-300 leading-relaxed">
+            
+            <!-- Section 1 -->
+            <section>
+                <h2 class="text-xl font-bold text-white mb-3">1. Overview</h2>
+                <p>
+                    The <strong>Wolvesville Tactical Overlay & Analytics Tracker</strong> ("we," "our," or "the Extension") is committed to maintaining strict user privacy. This Extension operates entirely as a client-side utility helper to assist players with manual notes, chat summaries, and vote history tracking during active matches on Wolvesville.com.
+                </p>
+            </section>
+
+            <!-- Section 2 -->
+            <section>
+                <h2 class="text-xl font-bold text-white mb-3">2. Zero Data Collection & Transmission</h2>
+                <p class="mb-3">
+                    We believe your data belongs to you. The Extension adheres to a strict zero-collection protocol:
+                </p>
+                <ul class="list-disc list-inside space-y-2 pl-2 text-slate-400">
+                    <li><strong class="text-slate-200">No Server Communications:</strong> The Extension does not possess any remote server infrastructure or analytics backend endpoints. It cannot transmit information over the network.</li>
+                    <li><strong class="text-slate-200">No Personal Data Scraping:</strong> We do not read, store, or log user accounts, login credentials, emails, authentication tokens, or payment details.</li>
+                    <li><strong class="text-slate-200">No Match Logs History Harvesting:</strong> Your chat analytics charts and voting matrices are compiled entirely inside temporary volatile runtime variables. They disappear when you close or refresh the match tab.</li>
+                </ul>
+            </section>
+
+            <!-- Section 3 -->
+            <section>
+                <h2 class="text-xl font-bold text-white mb-3">3. Chrome Extension Permissions Declared</h2>
+                <p class="mb-3">To execute its overlay functionalities seamlessly under Manifest V3 parameters, the Extension requests the following browser execution pathways:</p>
+                <div class="bg-slate-800/50 border border-slate-700/60 rounded-xl p-4 space-y-3">
+                    <div>
+                        <code class="text-indigo-400 font-mono text-xs bg-slate-900 px-2 py-1 rounded">chrome.storage.local</code>
+                        <p class="text-sm text-slate-400 mt-1">Utilized strictly to save your preferred localized language settings (<code class="font-mono text-xs">wovLang</code>) and UI theme layout configuration options (<code class="font-mono text-xs">wovDarkMode</code>) persistently across sessions.</p>
+                    </div>
+                    <div>
+                        <code class="text-indigo-400 font-mono text-xs bg-slate-900 px-2 py-1 rounded">activeTab / Host Permissions</code>
+                        <p class="text-sm text-slate-400 mt-1">Restricted strictly to the <code class="font-mono text-xs">https://*.wolvesville.com/*</code> origin space. This allows the script engine execution access to parse active open DOM tree frames to cleanly render the tactical control node and process visible match layouts locally.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4 -->
+            <section>
+                <h2 class="text-xl font-bold text-white mb-3">4. Security Infrastructure</h2>
+                <p>
+                    Because all operational tracking mechanics compile within your browser's local sandbox memory infrastructure, the security of your tactical metrics is tethered entirely to your personal device architecture. No outside malicious third parties can access your logged analytics because the data never crosses a network bridge.
+                </p>
+            </section>
+
+            <!-- Section 5 -->
+            <section>
+                <h2 class="text-xl font-bold text-white mb-3">5. Developer Policy Compliance Guarantee</h2>
+                <p>
+                    The Extension strictly complies with the Google Chrome Web Store Single Purpose Policy, User Data Privacy Guidelines, and Developer Program Rules. It does not automate inputs, read underlying WebSocket binaries, or simulate user interactions, ensuring absolute integrity alongside official fair-play regulations.
+                </p>
+            </section>
+
+            <!-- Section 6 -->
+            <section>
+                <h2 class="text-xl font-bold text-white mb-3">6. Contact & Support</h2>
+                <p>
+                    For code architectural clarifications, feature requests, or direct security infrastructure inquiries, please open an issue tracking card via our official community development pipeline or open documentation avenues listed on our main landing interface.
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Simple Footer -->
+    <footer class="border-t border-slate-800/80 bg-slate-950 text-slate-600 text-xs py-8">
+        <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span>© 2026 WovTactical Overlay. Safe Play Initiative.</span>
+            <span class="text-slate-700">Not affiliated with Wolvesville GmbH.</span>
+        </div>
+    </footer>
+
+</body>
+</html>
