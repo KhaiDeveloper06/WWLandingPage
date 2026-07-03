@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wolvesville Tactical Overlay & Analytics Tracker</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wovDark: '#0f172a',
+                        wovCard: '#1e293b',
+                        wovCrimson: '#ef4444',
+                        wovAmber: '#f59e0b',
+                        wovEmerald: '#10b981',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-wovDark text-slate-100 min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="border-b border-slate-800/80 bg-wovDark/80 backdrop-blur-md sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-600/30">W</div>
+                <span class="font-bold text-lg tracking-tight bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">WovTactical</span>
+            </div>
+            
+            <div class="flex items-center space-x-6">
+                <!-- Language Switcher -->
+                <div class="flex items-center bg-slate-800 rounded-lg p-0.5 border border-slate-700">
+                    <button id="lang-en" onclick="setLanguage('en')" class="px-2.5 py-1 text-xs font-semibold rounded-md transition-all duration-200 bg-indigo-600 text-white shadow-sm">EN</button>
+                    <button id="lang-vi" onclick="setLanguage('vi')" class="px-2.5 py-1 text-xs font-semibold rounded-md transition-all duration-200 text-slate-400 hover:text-white">VI</button>
+                </div>
+                <a href="#install" class="hidden sm:inline-flex items-center justify-center px-4 py-1.5 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg shadow-lg shadow-indigo-600/20 transition-all duration-200 transform hover:-translate-y-0.5" data-i18n="navBtn">Add to Chrome</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <!-- Ambient Light Gradients -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-indigo-500/10 blur-[120px] rounded-full -z-10"></div>
+        
+        <!-- Safety Badge -->
+        <div class="inline-flex items-center space-x-2 bg-wovEmerald/10 border border-wovEmerald/30 rounded-full px-4 py-1.5 mb-6 animate-pulse">
+            <span class="w-2 h-2 rounded-full bg-wovEmerald"></span>
+            <span class="text-xs font-bold text-wovEmerald tracking-wide uppercase" data-i18n="badgeText">100% Safe & ToS Compliant</span>
+        </div>
+
+        <!-- Main Copy -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight max-w-4xl mx-auto" data-i18n="heroTitle">
+            Dominate Wolvesville with Zero-Latency Real-Time Analytics
+        </h1>
+        <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed" data-i18n="heroSubtitle">
+            A commercial-grade tactical overlay designed for advanced behavioral message tracking, structured vote matrices, and smart data logging.
+        </p>
+
+        <!-- CTA Action Container -->
+        <div id="install" class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+            <!-- Replace # with your real Web Store URL when approved -->
+            <a href="#" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 font-bold text-white bg-indigo-600 hover:bg-indigo-500 rounded-xl shadow-xl shadow-indigo-600/30 transition-all duration-200 transform hover:-translate-y-1 text-center" data-i18n="ctaMain">
+                Add to Chrome — It's Free
+            </a>
+        </div>
+    </header>
+
+    <!-- Core Core Features Grid -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800/60">
+        <div class="text-center mb-16">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4" data-i18n="featuresHeadline">Engineered for Technical Competitive Advantage</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto" data-i18n="featuresSubhead">Zero network interception. Pure UI intelligence mapped directly over your active match layout.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="bg-wovCard border border-slate-800 rounded-2xl p-6 hover:border-slate-700/80 transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-xl bg-indigo-600/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-5 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3" data-i18n="f1Title">Analytical Chat Dashboard</h3>
+                <p class="text-slate-400 text-sm leading-relaxed" data-i18n="f1Desc">Expose passive wolves instantly. Tracks communication metrics through a real-time percentage heat map matrix or vertical geometric layout.</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="bg-wovCard border border-slate-800 rounded-2xl p-6 hover:border-slate-700/80 transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-xl bg-indigo-600/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-5 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3" data-i18n="f2Title">Chronological Vote Matrix</h3>
+                <p class="text-slate-400 text-sm leading-relaxed" data-i18n="f2Desc">Replaces chaotic chat scrolling. Features diagonal vectors separating days and tracking live unresolved updates cleanly.</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="bg-wovCard border border-slate-800 rounded-2xl p-6 hover:border-slate-700/80 transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-xl bg-indigo-600/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-5 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3" data-i18n="f3Title">Adaptive Floating Action Control</h3>
+                <p class="text-slate-400 text-sm leading-relaxed" data-i18n="f3Desc">Smart quadrant anchoring avoids layout clipping, shifting paths dynamically while active transparency cuts visual distractions.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer & Legal Zone -->
+    <footer class="border-t border-slate-800/80 bg-slate-950 text-slate-500 text-xs py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-2">
+                <span class="font-bold text-slate-400">WovTactical Overlay</span>
+                <span>© 2026. All rights reserved.</span>
+            </div>
+            <div class="flex space-x-6">
+                <!-- Links to our upcoming policy document -->
+                <a href="/privacy.html" class="hover:text-slate-300 transition-colors" data-i18n="footerPrivacy">Privacy Policy</a>
+                <span class="text-slate-800">|</span>
+                <span class="text-slate-600" data-i18n="footerDisclaimer">This independent utility tool is not affiliated with Wolvesville GmbH.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bilingual i18n Translation Engine Script -->
+    <script>
+        const dictionary = {
+            en: {
+                navBtn: "Add to Chrome",
+                badgeText: "100% Safe & ToS Compliant",
+                heroTitle: "Dominate Wolvesville with Zero-Latency Real-Time Analytics",
+                heroSubtitle: "A commercial-grade tactical overlay designed for advanced behavioral message tracking, structured vote matrices, and smart data logging.",
+                ctaMain: "Add to Chrome — It's Free",
+                featuresHeadline: "Engineered for Technical Competitive Advantage",
+                featuresSubhead: "Zero network interception. Pure UI intelligence mapped directly over your active match layout.",
+                f1Title: "Analytical Chat Dashboard",
+                f1Desc: "Expose passive wolves instantly. Tracks communication metrics through a real-time percentage heat map matrix or vertical geometric layout.",
+                f2Title: "Chronological Vote Matrix",
+                f2Desc: "Replaces chaotic chat scrolling. Features diagonal vectors separating days and tracking live unresolved updates cleanly.",
+                f3Title: "Adaptive Floating Action Control",
+                f3Desc: "Smart quadrant anchoring avoids layout clipping, shifting paths dynamically while active transparency cuts visual distractions.",
+                footerPrivacy: "Privacy Policy",
+                footerDisclaimer: "This independent utility tool is not affiliated with Wolvesville GmbH."
+            },
+            vi: {
+                navBtn: "Thêm vào Chrome",
+                badgeText: "100% An Toàn & Hợp Lệ (ToS)",
+                heroTitle: "Làm Chủ Trận Đấu Wolvesville Với Bộ Phân Tích Không Độ Trễ",
+                heroSubtitle: "Tiện ích mở rộng cao cấp giúp theo dõi mật độ tin nhắn, thiết lập ma trận lịch sử vote và ghi chú dữ liệu thông minh theo thời gian thực.",
+                ctaMain: "Thêm vào Chrome — Miễn Phí",
+                featuresHeadline: "Tối Ưu Cho Lợi Thế Cạnh Tranh Tuyệt Đối",
+                featuresSubhead: "Không can thiệp hệ thống mạng. Trí tuệ giao diện thuần túy hiển thị trực tiếp trên khung nền trận đấu.",
+                f1Title: "Bảng Phân Tích Tin Nhắn",
+                f1Desc: "Vạch trần sói ẩn mình ngay lập tức. Theo dõi số lượng hội thoại qua bản đồ nhiệt phần trăm hoặc biểu đồ cột dọc.",
+                f2Title: "Ma Trận Lịch Sử Vote",
+                f2Desc: "Thay thế việc cuộn đoạn chat hỗn loạn. Thiết lập vector chia ngày và cập nhật trạng thái vote trực tiếp (LIVE) rõ ràng.",
+                f3Title: "Nút Điều Khiển Thông Minh (FAB)",
+                f3Desc: "Tự động neo góc màn hình tránh tràn bố cục, thay đổi hướng hiển thị linh hoạt cùng bộ lọc mờ giảm xao nhãng.",
+                footerPrivacy: "Chính Sách Bảo Mật",
+                footerDisclaimer: "Tiện ích độc lập này không thuộc quyền quản lý hay liên kết với Wolvesville GmbH."
+            }
+        };
+
+        function setLanguage(lang) {
+            // Update Text Nodes
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (dictionary[lang][key]) {
+                    element.textContent = dictionary[lang][key];
+                }
+            });
+
+            // Update HTML Lang attribute
+            document.documentElement.lang = lang;
+
+            // Toggle active state styling on buttons
+            const btnEn = document.getElementById('lang-en');
+            const btnVi = document.getElementById('lang-vi');
+
+            if (lang === 'vi') {
+                btnVi.className = "px-2.5 py-1 text-xs font-semibold rounded-md transition-all duration-200 bg-indigo-600 text-white shadow-sm";
+                btnEn.className = "px-2.5 py-1 text-xs font-semibold rounded-md transition-all duration-200 text-slate-400 hover:text-white";
+            } else {
+                btnEn.className = "px-2.5 py-1 text-xs font-semibold rounded-md transition-all duration-200 bg-indigo-600 text-white shadow-sm";
+                btnVi.className = "px-2.5 py-1 text-xs font-semibold rounded-md transition-all duration-200 text-slate-400 hover:text-white";
+            }
+        }
+    </script>
+</body>
+</html>
