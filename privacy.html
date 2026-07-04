@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Wolvesville Wizard</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -20,6 +21,7 @@
             }
         }
     </script>
+    <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -29,6 +31,7 @@
 </head>
 <body class="bg-wovDark text-slate-100 min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
 
+    <!-- Navigation -->
     <nav class="border-b border-slate-800/80 bg-wovDark/80 backdrop-blur-md sticky top-0 z-50 transition-all duration-300">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <a href="index.html" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
@@ -37,6 +40,7 @@
             </a>
             
             <div class="flex items-center space-x-6">
+                <!-- Language Switcher -->
                 <div class="flex items-center bg-slate-800 rounded-lg p-0.5 border border-slate-700">
                     <button id="lang-en" onclick="setLanguage('en')" class="px-2.5 py-1 text-xs font-semibold rounded-md transition-all duration-200 bg-indigo-600 text-white shadow-sm">EN</button>
                     <button id="lang-vi" onclick="setLanguage('vi')" class="px-2.5 py-1 text-xs font-semibold rounded-md transition-all duration-200 text-slate-400 hover:text-white">VI</button>
@@ -46,43 +50,90 @@
         </div>
     </nav>
 
-    <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-grow">
-        <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-8 tracking-tight" data-i18n="pageTitle">Privacy Policy</h1>
-        
-        <div class="bg-wovCard border border-slate-800 rounded-2xl p-8 space-y-8 text-slate-300 leading-relaxed shadow-xl">
+    <!-- Privacy Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-grow w-full">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-2 tracking-tight" data-i18n="pageTitle">Privacy Policy</h1>
+        <p class="text-sm text-slate-500 mb-10" data-i18n="lastUpdated">Last Updated: July 2026</p>
+
+        <div class="bg-wovCard border border-slate-800 rounded-2xl p-8 space-y-10 text-slate-300 leading-relaxed shadow-xl">
             
+            <!-- Section 1 -->
             <section>
-                <p class="text-lg" data-i18n="intro1">Transparency is critical when it comes to gaming tools. The short version? <strong>Wolvesville Wizard does not track you, does not collect your personal information, and does not send any game data to external servers.</strong></p>
-                <p class="mt-4" data-i18n="intro2">This tool was built to give you a tactical edge, not to harvest your data. Everything happens entirely on your own device.</p>
+                <h2 class="text-xl font-bold text-white mb-3" data-i18n="sec1Title">1. Overview</h2>
+                <p data-i18n="sec1Desc">
+                    The <strong>Wolvesville Wizard</strong> ("we," "our," or "the Extension") is committed to maintaining strict user privacy. This Extension operates as a client-side utility helper to assist players with manual notes, chat summaries, and vote history tracking during active matches on Wolvesville.com.
+                </p>
             </section>
 
+            <!-- Section 2 -->
             <section>
-                <h2 class="text-xl font-bold text-white mb-3 flex items-center"><span class="w-2 h-2 rounded-full bg-wovEmerald mr-3"></span><span data-i18n="sec1Title">1. Data Collection & Usage</span></h2>
-                <p data-i18n="sec1Desc">We collect absolutely nothing. There are no analytics trackers, no background telemetry, and no hidden scripts. The extension reads the public chat and voting elements directly from your browser screen solely to update your local overlay in real time.</p>
+                <h2 class="text-xl font-bold text-white mb-3" data-i18n="sec2Title">2. Core Match Data Collection & Transmission</h2>
+                <p class="mb-4" data-i18n="sec2Desc">
+                    We believe your gameplay data belongs to you. The core features of the Extension adhere to a strict local-only protocol:
+                </p>
+                <ul class="list-disc list-inside space-y-3 pl-2 text-slate-400">
+                    <li data-i18n="sec2Li1"><strong class="text-slate-200">No Server Communications for Match Data:</strong> The Extension does not possess any remote server infrastructure for gameplay analytics. It does not transmit your match logs or chat data over the network.</li>
+                    <li data-i18n="sec2Li2"><strong class="text-slate-200">No Personal Game Data Scraping:</strong> We do not read, store, or log user accounts, login credentials, or game authentication tokens.</li>
+                    <li data-i18n="sec2Li3"><strong class="text-slate-200">Volatile Match Logging:</strong> Your chat analytics charts and voting matrices are compiled entirely inside temporary runtime variables. They disappear when you close or refresh the match tab.</li>
+                </ul>
             </section>
 
+            <!-- Section 3 -->
             <section>
-                <h2 class="text-xl font-bold text-white mb-3 flex items-center"><span class="w-2 h-2 rounded-full bg-indigo-500 mr-3"></span><span data-i18n="sec2Title">2. Why We Need the "Storage" Permission</span></h2>
-                <p data-i18n="sec2Desc">When you install the extension, Chrome will notify you that it requires "storage" permissions. We use your browser's secure local storage exclusively to save your custom player notes, tactical layout preferences, and the current state of the matrix. This ensures your data survives if you accidentally refresh the page during a match. None of this data ever leaves your computer.</p>
+                <h2 class="text-xl font-bold text-white mb-3" data-i18n="sec3Title">3. License Verification & Third-Party Integrations</h2>
+                <p class="mb-4" data-i18n="sec3Desc">To support the ongoing development of the Extension, we may offer optional premium features and display integrations:</p>
+                <ul class="list-disc list-inside space-y-3 pl-2 text-slate-400">
+                    <li data-i18n="sec3Li1"><strong class="text-slate-200">Separation of License and Gameplay Data:</strong> If you choose to upgrade to a premium tier, transaction data is processed entirely by our secure third-party Merchant of Record (e.g., LemonSqueezy, Stripe). The Extension only locally stores a cryptographic license validation token to verify your premium status. It does not read, process, or store your payment details.</li>
+                    <li data-i18n="sec3Li2"><strong class="text-slate-200">Ad & Affiliate Networks:</strong> The free tier of the Extension may include non-intrusive affiliate links or display banners provided by third-party gaming networks. These networks may use standard browser cookies to serve contextually relevant content, but they do not have access to your in-game chat or vote analytics.</li>
+                </ul>
             </section>
 
+            <!-- Section 4 -->
             <section>
-                <h2 class="text-xl font-bold text-white mb-3 flex items-center"><span class="w-2 h-2 rounded-full bg-wovAmber mr-3"></span><span data-i18n="sec3Title">3. Third-Party Access</span></h2>
-                <p data-i18n="sec3Desc">Because we do not collect any data, we have absolutely nothing to share, sell, or transfer to third-party services, advertising networks, or corporate entities.</p>
+                <h2 class="text-xl font-bold text-white mb-3" data-i18n="sec4Title">4. Chrome Extension Permissions Declared</h2>
+                <p class="mb-4" data-i18n="sec4Desc">To execute its overlay functionalities seamlessly under Manifest V3 parameters, the Extension requests the following browser execution pathways:</p>
+                <div class="bg-slate-900/50 border border-slate-700/60 rounded-xl p-5 space-y-4">
+                    <div>
+                        <code class="text-indigo-400 font-mono text-sm bg-slate-950 px-2.5 py-1 rounded border border-slate-800">chrome.storage.local</code>
+                        <p class="text-sm text-slate-400 mt-2" data-i18n="sec4Code1">Utilized strictly to save your preferred localized language settings, UI theme configurations, custom player notes, and premium license validation tokens persistently across sessions.</p>
+                    </div>
+                    <div class="pt-2">
+                        <code class="text-indigo-400 font-mono text-sm bg-slate-950 px-2.5 py-1 rounded border border-slate-800">activeTab / Host Permissions</code>
+                        <p class="text-sm text-slate-400 mt-2" data-i18n="sec4Code2">Restricted strictly to the <code>https://*.wolvesville.com/*</code> origin space. This allows the script engine execution access to parse active open DOM tree frames to cleanly render the tactical control node and process visible match layouts locally.</p>
+                    </div>
+                </div>
             </section>
 
+            <!-- Section 5 -->
+            <section>
+                <h2 class="text-xl font-bold text-white mb-3" data-i18n="sec5Title">5. Developer Policy Compliance Guarantee</h2>
+                <p data-i18n="sec5Desc">
+                    The Extension strictly complies with the Google Chrome Web Store Single Purpose Policy, User Data Privacy Guidelines, and Developer Program Rules. <strong>The Extension operates purely via passive HTML DOM element parsing. It does not intercept, read, modify, or transmit WebSocket network payloads</strong>, ensuring absolute integrity alongside official game fair-play regulations.
+                </p>
+            </section>
+
+            <!-- Section 6 -->
             <section class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 mt-8">
-                <h2 class="text-lg font-bold text-white mb-2" data-i18n="contactTitle">Got questions or found a bug?</h2>
-                <p class="text-sm mb-4" data-i18n="contactDesc">Feel free to reach out directly. I am actively maintaining this tool for the community.</p>
-                <a href="mailto:khaideveloper.dev@gmail.com" class="inline-flex items-center text-indigo-400 hover:text-indigo-300 font-semibold transition-colors">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    khaideveloper.dev@gmail.com
-                </a>
+                <h2 class="text-lg font-bold text-white mb-2" data-i18n="sec6Title">6. Contact & Support</h2>
+                <p class="text-sm text-slate-400 mb-4" data-i18n="sec6Desc">
+                    For code architectural clarifications, feature requests, or direct security infrastructure inquiries, please contact the developer directly or open an issue on our official GitHub repository.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="mailto:khaideveloper.dev@gmail.com" class="inline-flex items-center text-indigo-400 hover:text-indigo-300 font-semibold transition-colors bg-slate-950 px-4 py-2 rounded-lg border border-slate-800/60 w-fit">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        khaideveloper.dev@gmail.com
+                    </a>
+                    <a href="https://github.com/KhaiDeveloper" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-slate-300 hover:text-white font-semibold transition-colors bg-slate-950 px-4 py-2 rounded-lg border border-slate-800/60 w-fit">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path></svg>
+                        GitHub Issues
+                    </a>
+                </div>
             </section>
 
         </div>
     </main>
 
+    <!-- Footer & Legal Zone -->
     <footer class="border-t border-slate-800/80 bg-slate-950 text-slate-500 text-xs py-10">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
             
@@ -108,21 +159,32 @@
         </div>
     </footer>
 
+    <!-- Bilingual i18n Translation Engine Script -->
     <script>
         const dictionary = {
             en: {
                 navHome: "Back to Home",
                 pageTitle: "Privacy Policy",
-                intro1: "Transparency is critical when it comes to gaming tools. The short version? <strong>Wolvesville Wizard does not track you, does not collect your personal information, and does not send any game data to external servers.</strong>",
-                intro2: "This tool was built to give you a tactical edge, not to harvest your data. Everything happens entirely on your own device.",
-                sec1Title: "1. Data Collection & Usage",
-                sec1Desc: "We collect absolutely nothing. There are no analytics trackers, no background telemetry, and no hidden scripts. The extension reads the public chat and voting elements directly from your browser screen solely to update your local overlay in real time.",
-                sec2Title: "2. Why We Need the \"Storage\" Permission",
-                sec2Desc: "When you install the extension, Chrome will notify you that it requires \"storage\" permissions. We use your browser's secure local storage exclusively to save your custom player notes, tactical layout preferences, and the current state of the matrix. This ensures your data survives if you accidentally refresh the page during a match. None of this data ever leaves your computer.",
-                sec3Title: "3. Third-Party Access",
-                sec3Desc: "Because we do not collect any data, we have absolutely nothing to share, sell, or transfer to third-party services, advertising networks, or corporate entities.",
-                contactTitle: "Got questions or found a bug?",
-                contactDesc: "Feel free to reach out directly. I am actively maintaining this tool for the community.",
+                lastUpdated: "Last Updated: July 2026",
+                sec1Title: "1. Overview",
+                sec1Desc: "The <strong>Wolvesville Wizard</strong> (\"we,\" \"our,\" or \"the Extension\") is committed to maintaining strict user privacy. This Extension operates as a client-side utility helper to assist players with manual notes, chat summaries, and vote history tracking during active matches on Wolvesville.com.",
+                sec2Title: "2. Core Match Data Collection & Transmission",
+                sec2Desc: "We believe your gameplay data belongs to you. The core features of the Extension adhere to a strict local-only protocol:",
+                sec2Li1: "<strong class=\"text-slate-200\">No Server Communications for Match Data:</strong> The Extension does not possess any remote server infrastructure for gameplay analytics. It does not transmit your match logs or chat data over the network.",
+                sec2Li2: "<strong class=\"text-slate-200\">No Personal Game Data Scraping:</strong> We do not read, store, or log user accounts, login credentials, or game authentication tokens.",
+                sec2Li3: "<strong class=\"text-slate-200\">Volatile Match Logging:</strong> Your chat analytics charts and voting matrices are compiled entirely inside temporary runtime variables. They disappear when you close or refresh the match tab.",
+                sec3Title: "3. License Verification & Third-Party Integrations",
+                sec3Desc: "To support the ongoing development of the Extension, we may offer optional premium features and display integrations:",
+                sec3Li1: "<strong class=\"text-slate-200\">Separation of License and Gameplay Data:</strong> If you choose to upgrade to a premium tier, transaction data is processed entirely by our secure third-party Merchant of Record (e.g., LemonSqueezy, Stripe). The Extension only locally stores a cryptographic license validation token to verify your premium status. It does not read, process, or store your payment details.",
+                sec3Li2: "<strong class=\"text-slate-200\">Ad & Affiliate Networks:</strong> The free tier of the Extension may include non-intrusive affiliate links or display banners provided by third-party gaming networks. These networks may use standard browser cookies to serve contextually relevant content, but they do not have access to your in-game chat or vote analytics.",
+                sec4Title: "4. Chrome Extension Permissions Declared",
+                sec4Desc: "To execute its overlay functionalities seamlessly under Manifest V3 parameters, the Extension requests the following browser execution pathways:",
+                sec4Code1: "Utilized strictly to save your preferred localized language settings, UI theme configurations, custom player notes, and premium license validation tokens persistently across sessions.",
+                sec4Code2: "Restricted strictly to the <code>https://*.wolvesville.com/*</code> origin space. This allows the script engine execution access to parse active open DOM tree frames to cleanly render the tactical control node and process visible match layouts locally.",
+                sec5Title: "5. Developer Policy Compliance Guarantee",
+                sec5Desc: "The Extension strictly complies with the Google Chrome Web Store Single Purpose Policy, User Data Privacy Guidelines, and Developer Program Rules. <strong>The Extension operates purely via passive HTML DOM element parsing. It does not intercept, read, modify, or transmit WebSocket network payloads</strong>, ensuring absolute integrity alongside official game fair-play regulations.",
+                sec6Title: "6. Contact & Support",
+                sec6Desc: "For code architectural clarifications, feature requests, or direct security infrastructure inquiries, please contact the developer directly or open an issue on our official GitHub repository.",
                 footerDeveloper: "Developed by",
                 footerSupport: "Support",
                 footerDisclaimer: "This independent utility tool is not affiliated with Wolvesville GmbH."
@@ -130,16 +192,26 @@
             vi: {
                 navHome: "Về Trang Chủ",
                 pageTitle: "Chính Sách Bảo Mật",
-                intro1: "Sự minh bạch là yếu tố sống còn đối với các công cụ hỗ trợ game. Nói ngắn gọn thì: <strong>Wolvesville Wizard không theo dõi bạn, không thu thập thông tin cá nhân và tuyệt đối không gửi bất kỳ dữ liệu game nào ra máy chủ bên ngoài.</strong>",
-                intro2: "Công cụ này được tạo ra để mang lại lợi thế chiến thuật cho bạn, không phải để thu thập dữ liệu. Mọi hoạt động đều diễn ra hoàn toàn trên thiết bị của bạn.",
-                sec1Title: "1. Thu Thập & Sử Dụng Dữ Liệu",
-                sec1Desc: "Mình hoàn toàn không thu thập bất cứ thứ gì. Không có trình theo dõi phân tích, không thu thập dữ liệu ngầm, và không có script ẩn. Tiện ích chỉ đọc các đoạn chat công khai và hoạt động vote trực tiếp từ màn hình trình duyệt của bạn để cập nhật overlay ngay trong thời gian thực.",
-                sec2Title: "2. Tại Sao Cần Quyền \"Storage\" (Lưu Trữ)",
-                sec2Desc: "Khi bạn cài đặt tiện ích, Chrome sẽ thông báo cần cấp quyền \"storage\". Mình chỉ sử dụng bộ nhớ cục bộ an toàn của trình duyệt để lưu các ghi chú người chơi của bạn, cài đặt giao diện và trạng thái hiện tại của ma trận. Điều này đảm bảo dữ liệu của bạn không bị mất nếu vô tình tải lại trang giữa trận. Không có bất kỳ dữ liệu nào rời khỏi máy tính của bạn.",
-                sec3Title: "3. Quyền Truy Cập Của Bên Thứ Ba",
-                sec3Desc: "Vì mình không thu thập bất kỳ dữ liệu nào, nên hoàn toàn không có gì để chia sẻ, bán, hoặc chuyển giao cho các dịch vụ bên thứ ba, mạng quảng cáo hay bất kỳ tổ chức nào khác.",
-                contactTitle: "Có câu hỏi hoặc tìm thấy lỗi?",
-                contactDesc: "Đừng ngại liên hệ trực tiếp nhé. Mình đang tích cực duy trì và phát triển công cụ này cho cộng đồng.",
+                lastUpdated: "Cập nhật lần cuối: Tháng 7, 2026",
+                sec1Title: "1. Tổng Quan",
+                sec1Desc: "<strong>Wolvesville Wizard</strong> (\"chúng tôi\", \"tiện ích\") cam kết bảo vệ tuyệt đối quyền riêng tư của người dùng. Tiện ích này hoạt động như một công cụ hỗ trợ phía máy khách (client-side) giúp người chơi ghi chú thủ công, tóm tắt nội dung chat và theo dõi lịch sử vote trực tiếp trong các trận đấu trên Wolvesville.com.",
+                sec2Title: "2. Thu Thập & Truyền Tải Dữ Liệu Trận Đấu",
+                sec2Desc: "Dữ liệu trận đấu là tài sản của bạn. Các tính năng cốt lõi của Tiện ích tuân thủ nghiêm ngặt giao thức chỉ hoạt động cục bộ:",
+                sec2Li1: "<strong class=\"text-slate-200\">Không Sử Dụng Máy Chủ Thu Thập Dữ Liệu:</strong> Tiện ích không sở hữu bất kỳ hạ tầng máy chủ từ xa nào để phân tích gameplay. Chúng tôi không truyền tải nhật ký trận đấu hay dữ liệu chat của bạn qua mạng.",
+                sec2Li2: "<strong class=\"text-slate-200\">Không Thu Thập Dữ Liệu Tài Khoản Game:</strong> Chúng tôi không đọc, lưu trữ, hay ghi nhận tài khoản người dùng, thông tin đăng nhập, hoặc token xác thực của game.",
+                sec2Li3: "<strong class=\"text-slate-200\">Lưu Trữ Tạm Thời (Volatile Logging):</strong> Biểu đồ chat và ma trận vote của bạn được xử lý hoàn toàn trong các biến tạm thời của trình duyệt. Chúng sẽ tự động biến mất khi bạn đóng hoặc tải lại trang trận đấu.",
+                sec3Title: "3. Xác Thực Bản Quyền & Tích Hợp Bên Thứ Ba",
+                sec3Desc: "Để duy trì hoạt động phát triển Tiện ích, chúng tôi có thể cung cấp các tính năng cao cấp (premium) tùy chọn và tích hợp hiển thị:",
+                sec3Li1: "<strong class=\"text-slate-200\">Tách Biệt Dữ Liệu Bản Quyền và Game:</strong> Nếu bạn chọn nâng cấp lên gói premium, dữ liệu giao dịch được xử lý hoàn toàn bởi các cổng thanh toán an toàn của bên thứ ba (VD: LemonSqueezy, Stripe). Tiện ích chỉ lưu cục bộ một token mã hóa để xác thực trạng thái premium của bạn. Chúng tôi tuyệt đối không đọc, xử lý hay lưu trữ thông tin thẻ thanh toán của bạn.",
+                sec3Li2: "<strong class=\"text-slate-200\">Mạng Quảng Cáo & Tiếp Thị Liên Kết:</strong> Phiên bản miễn phí của Tiện ích có thể bao gồm các liên kết tiếp thị hoặc banner quảng cáo không gây phiền nhiễu từ các mạng lưới game. Các mạng lưới này có thể sử dụng cookie tiêu chuẩn của trình duyệt để hiển thị nội dung phù hợp, nhưng họ tuyệt đối không có quyền truy cập vào dữ liệu chat hoặc vote trong game của bạn.",
+                sec4Title: "4. Giải Trình Các Quyền (Permissions) Trên Chrome",
+                sec4Desc: "Để thực thi mượt mà các chức năng overlay dưới tiêu chuẩn Manifest V3, Tiện ích yêu cầu các quyền truy cập trình duyệt sau:",
+                sec4Code1: "Được sử dụng duy nhất để lưu các tùy chọn ngôn ngữ, cài đặt giao diện (UI), ghi chú người chơi thủ công, và token xác thực bản quyền premium để duy trì giữa các lần bạn mở trình duyệt.",
+                sec4Code2: "Giới hạn nghiêm ngặt chỉ hoạt động trên tên miền <code>https://*.wolvesville.com/*</code>. Quyền này cho phép mã nguồn đọc các cấu trúc hiển thị (DOM) đang mở để vẽ giao diện tiện ích và xử lý số liệu trận đấu ngay trên máy của bạn.",
+                sec5Title: "5. Cam Kết Tuân Thủ Chính Sách Nhà Phát Triển",
+                sec5Desc: "Tiện ích tuân thủ nghiêm ngặt Chính Sách Đơn Mục Đích (Single Purpose Policy), Hướng Dẫn Bảo Mật Dữ Liệu Người Dùng và Quy Tắc Nhà Phát Triển của Google Chrome Web Store. <strong>Tiện ích hoạt động thuần túy qua việc đọc mã HTML DOM thụ động. Nó không can thiệp, đọc, sửa đổi hay gửi đi bất kỳ gói tin mạng WebSocket nào</strong>, đảm bảo tính toàn vẹn và hợp lệ tuyệt đối với các quy định công bằng của game.",
+                sec6Title: "6. Liên Hệ & Hỗ Trợ",
+                sec6Desc: "Đối với các thắc mắc về kiến trúc mã nguồn, yêu cầu tính năng mới, hoặc các câu hỏi trực tiếp về cơ sở hạ tầng bảo mật, vui lòng liên hệ trực tiếp với nhà phát triển hoặc mở một Issue trên kho lưu trữ mã nguồn GitHub chính thức của chúng tôi.",
                 footerDeveloper: "Được phát triển bởi",
                 footerSupport: "Hỗ trợ",
                 footerDisclaimer: "Tiện ích độc lập này không liên kết với Wolvesville GmbH."
@@ -147,7 +219,7 @@
         };
 
         function setLanguage(lang) {
-            // Update Text Nodes using innerHTML to support bold tags
+            // Update Text Nodes using innerHTML to support bold and nested tags
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
                 if (dictionary[lang][key]) {
