@@ -114,6 +114,80 @@
         </div>
     </main>
 
+    <!-- Section: Field Manual & Dev Sandbox (Split Layout) -->
+    <section id="how-to-use" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800/60">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <!-- Left Side: Interactive Field Manual (7 Columns) -->
+            <div class="lg:col-span-7 space-y-12">
+                <h2 class="text-2xl font-bold text-white mb-6" data-i18n="splitLeftHeader">Interactive Field Manual</h2>
+                <div class="space-y-8">
+                    <!-- Step 1 -->
+                    <div class="bg-wovCard/40 border border-slate-800/80 rounded-2xl p-5 hover:border-slate-700 transition-colors shadow-sm">
+                        <img src="assets/image1.png" alt="HUD Position" class="rounded-xl w-full object-cover border border-slate-800 mb-5 shadow-md">
+                        <div class="flex items-start gap-3">
+                            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-indigo-600/20 text-indigo-400 flex items-center justify-center font-bold text-xs border border-indigo-500/30">1</span>
+                            <p class="text-sm text-slate-300 leading-relaxed pt-0.5" data-i18n="mStep1Desc">Locate the floating menu icon (bottom right). Drag it to a comfortable spot on your screen, then hover over it to expand your toolset.</p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="bg-wovCard/40 border border-slate-800/80 rounded-2xl p-5 hover:border-slate-700 transition-colors shadow-sm">
+                        <img src="assets/image2.png" alt="Scan Role" class="rounded-xl w-full object-cover border border-slate-800 mb-5 shadow-md">
+                        <div class="flex items-start gap-3">
+                            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-wovAmber/20 text-wovAmber flex items-center justify-center font-bold text-xs border border-wovAmber/30">2</span>
+                            <p class="text-sm text-slate-300 leading-relaxed pt-0.5" data-i18n="mStep2Desc">As soon as a game starts, click "Scan Role". This loads the current lobby's player icons into your tracker for lightning-fast noting.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="bg-wovCard/40 border border-slate-800/80 rounded-2xl p-5 hover:border-slate-700 transition-colors shadow-sm">
+                        <img src="assets/image3.png" alt="Reset Board" class="rounded-xl w-full object-cover border border-slate-800 mb-5 shadow-md">
+                        <div class="flex items-start gap-3">
+                            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-wovCrimson/20 text-wovCrimson flex items-center justify-center font-bold text-xs border border-wovCrimson/30">3</span>
+                            <p class="text-sm text-slate-300 leading-relaxed pt-0.5" data-i18n="mStep3Desc">After the game ends, click "Reset Board". This wipes your chat and vote data clean so you are immediately ready for the next lobby.</p>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="bg-wovCard/40 border border-slate-800/80 rounded-2xl p-5 hover:border-slate-700 transition-colors shadow-sm">
+                        <img src="assets/image4.png" alt="Dead Players" class="rounded-xl w-full object-cover border border-slate-800 mb-5 shadow-md">
+                        <div class="flex items-start gap-3">
+                            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-slate-600/20 text-slate-400 flex items-center justify-center font-bold text-xs border border-slate-500/30">4</span>
+                            <p class="text-sm text-slate-300 leading-relaxed pt-0.5" data-i18n="mStep4Desc">Track the casualties. The matrix automatically visualizes dead players, providing better readability so you can focus entirely on the surviving suspects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Sticky Sandbox Logs (5 Columns) -->
+            <div class="lg:col-span-5">
+                <div class="lg:sticky lg:top-24 bg-wovCard border border-slate-800 rounded-2xl p-8 space-y-8 shadow-xl">
+                    <!-- Flaws -->
+                    <div>
+                        <h3 class="text-xs font-bold text-wovCrimson uppercase tracking-widest mb-4 flex items-center">
+                            <span class="w-2 h-2 rounded-full bg-wovCrimson mr-2 shadow-[0_0_8px_rgba(239,68,68,0.6)]"></span> 
+                            <span data-i18n="flawsTitle">Current System Flaws (V1.0.1)</span>
+                        </h3>
+                        <ul class="space-y-3 text-sm text-slate-400 leading-relaxed border-l-2 border-slate-700 pl-4 ml-1 list-disc list-inside marker:text-slate-600">
+                            <li data-i18n="flaw1">Manual "Scan Role" required at the start of each match to grab data.</li>
+                            <li data-i18n="flaw2">Manual "Reset Board" required before new matches to wipe old data.</li>
+                            <li data-i18n="flaw3">Switching Day/Night tabs as a Werewolf duplicates the chat counter.</li>
+                            <li data-i18n="flaw4">Chat counter currently tracks Jailer & Dead chats, which is in fact a flaw, but it ignores special channels (Instigator, Alpha, Sect Leader).</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Roadmap -->
+                    <div class="border-t border-slate-800/80 pt-8">
+                        <h3 class="text-xs font-bold text-wovEmerald uppercase tracking-widest mb-3 flex items-center">
+                            <span class="w-2 h-2 rounded-full bg-wovEmerald mr-2 shadow-[0_0_8px_rgba(16,185,129,0.6)]"></span> 
+                            <span data-i18n="roadmapTitleText">Dev Notes & Future Roadmap</span>
+                        </h3>
+                        <p class="text-sm text-slate-400 leading-relaxed border-l-2 border-slate-700 pl-4 ml-1" data-i18n="roadLong">Why the chat counter bug persists: Dead chats aren't tactically important anymore, and Werewolves already know who their team is (so they don't need the counter to hunt). However, a patch fixing the duplicate counting and night channels is planned for the future.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <!-- Footer & Legal Zone -->
     <footer class="border-t border-slate-800/80 bg-slate-950 text-slate-500 text-xs py-10">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -162,7 +236,23 @@
                 f3Desc: "The UI stays completely out of your way. Drag it anywhere—it snaps cleanly to the edges and fades out when you need to focus on the game.",
                 footerPrivacy: "Privacy Policy",
                 footerDeveloper: "Developed by",
-                footerDisclaimer: "Not affiliated with Wolvesville GmbH."
+                footerDisclaimer: "Not affiliated with Wolvesville GmbH.",
+                
+                // Split Sandbox Layout Keys
+                splitLeftHeader: "Interactive Field Manual",
+                mStep1Desc: "Locate the floating menu icon (bottom right). Drag it to a comfortable spot on your screen, then hover over it to expand your toolset.",
+                mStep2Desc: "As soon as a game starts, click \"Scan Role\". This loads the current lobby's player icons into your tracker for lightning-fast noting.",
+                mStep3Desc: "After the game ends, click \"Reset Board\". This wipes your chat and vote data clean so you are immediately ready for the next lobby.",
+                mStep4Desc: "Track the casualties. The matrix automatically visualizes dead players, providing better readability so you can focus entirely on the surviving suspects.",
+                
+                flawsTitle: "Current System Flaws (V1.0.1)",
+                flaw1: "Manual \"Scan Role\" required at the start of each match to grab data.",
+                flaw2: "Manual \"Reset Board\" required before new matches to wipe old data.",
+                flaw3: "Switching Day/Night tabs as a Werewolf duplicates the chat counter.",
+                flaw4: "Chat counter currently tracks Jailer & Dead chats, which is in fact a flaw, but it ignores special channels (Instigator, Alpha, Sect Leader).",
+                
+                roadmapTitleText: "Dev Notes & Future Roadmap",
+                roadLong: "Why the chat counter bug persists: Dead chats aren't tactically important anymore, and Werewolves already know who their team is (so they don't need the counter to hunt). However, a patch fixing the duplicate counting and night channels is planned for the future."
             },
             vi: {
                 navBtn: "Thêm vào Chrome",
@@ -180,7 +270,23 @@
                 f3Desc: "Hoàn toàn không gây vướng víu. Tự động neo gọn vào viền màn hình và cơ chế tự làm mờ thông minh khi bạn cần tập trung chơi game.",
                 footerPrivacy: "Chính Sách Bảo Mật",
                 footerDeveloper: "Được phát triển bởi",
-                footerDisclaimer: "Không liên kết với Wolvesville GmbH."
+                footerDisclaimer: "Không liên kết với Wolvesville GmbH.",
+                
+                // Split Sandbox Layout Keys
+                splitLeftHeader: "Cẩm Nang Thực Chiến Trực Quan",
+                mStep1Desc: "Tìm biểu tượng menu nổi (nằm ở góc dưới bên phải). Kéo thả đến một vị trí thoải mái trên màn hình của bạn, sau đó di chuột vào để hiển thị các công cụ.",
+                mStep2Desc: "Ngay khi game bắt đầu, hãy bấm \"Scan Role\". Hành động này sẽ tải toàn bộ icon của người chơi trong phòng vào bảng theo dõi để bạn có thể ghi chú cực nhanh.",
+                mStep3Desc: "Sau khi trận đấu kết thúc, hãy bấm \"Reset Board\". Nút này sẽ xóa sạch dữ liệu chat và vote của trận cũ, giúp bạn sẵn sàng ngay lập tức cho trận đấu tiếp theo.",
+                mStep4Desc: "Nhận diện người chết. Ma trận tự động làm mờ và đánh dấu người chơi đã chết, giúp giao diện dễ nhìn hơn để bạn tập trung vào những kẻ tình nghi còn sống.",
+                
+                flawsTitle: "Hạn Chế Hiện Tại (Bản V1.0.1)",
+                flaw1: "Phải bấm \"Scan Role\" thủ công đầu mỗi trận để tải dữ liệu.",
+                flaw2: "Phải bấm \"Reset Board\" thủ công trước trận mới để xóa dữ liệu cũ.",
+                flaw3: "Việc chuyển đổi giữa tab Ngày/Đêm khi làm Sói sẽ làm nhân đôi bộ đếm chat.",
+                flaw4: "Bộ đếm chat ghi nhận cả chat của Quản Ngục và người chết (đây thực tế là lỗi), nhưng tool vẫn thành công bỏ qua các kênh chat đặc biệt (Kẻ Xúi Giục, Sói Alpha, Giáo Chủ).",
+                
+                roadmapTitleText: "Ghi Chú & Định Hướng Phát Triển",
+                roadLong: "Lý do lỗi bộ đếm chat chưa được ưu tiên fix: Chat của người chết không còn giá trị trong thực tế. Ngược lại, Sói đã biết rõ phe mình nên không quá phụ thuộc vào bộ đếm. Dù vậy, bản vá sửa lỗi chuyển tab và theo dõi kênh chat về đêm chắc chắn sẽ có trong tương lai."
             }
         };
 
